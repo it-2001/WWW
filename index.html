@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WWW</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>World Wide Web</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Vznik WWW a principy</h2>
+      <p>
+        <strong>World Wide Web</strong> (<abbr title="World Wide Web">WWW</abbr>, také pouze zkráceně web), ve volném
+        překladu
+        „celosvětová pavučina“, je označení pro aplikace internetového
+        protokolu <abbr title="Hypertext Transfer Protocol">HTTP</abbr>. Je tím myšlena soustava propojených
+        hypertextových
+        dokumentů. Služba se zrodila se v roce 1989 v evropském vědeckém
+        centru CERN v Ženevě díky <strong>Timu Berners-Lee</strong>.
+      </p>
+      <p>
+        Za hypertext označujeme takový text, který obsahuje propojení na jiné
+        texty pomocí tzv. hypertextových odkazů. Ve službě WWW jsou
+        realizovány jako tzv. <abbr title="Uniform Resource Locator">URL</abbr> odkazy. Služba je založena na spolupráci
+        WWW
+        klientů (browserů) s WWW serverem. Prvním komerčním prohlížečem
+        webových stránek byl na počátku 90. let minulého století <i>Mosaic</i>.
+      </p>
+      <p>Při jejich spolupráci fungují následující mechanismy:</p>
+      <ul>
+        <li>
+          komunikační protokol HTTP, pomocí něhož WWW klient a WWW server
+          komunikují,
+        </li>
+        <li>
+          jazyk <abbr title="HyperText Markup Language">HTML</abbr>, definující formát WWW
+          stránek, které server vrací klientovi.
+        </li>
+      </ul>
+      <p>
+        <abbr title="World Wide Web Consortium">W3C</abbr> je mezinárodní konsorcium jehož
+        členové společně s veřejností vyvíjejí webové standardy pro WWW.
+        Konsorciu předsedá Tim Berners-Lee.
+      </p>
+    </section>
+    <section>
+      <h2>WWW - otázky a odpovědi</h2>
+      <!-- 1. otázka -->
+      <h3>Webový server</h3>
+      <div class="otazka">1. Jakou roli plní webový server? Uveďte příklady webových serverů.</div>
+      <div class="odpoved">
+        <p>Server je <strong>bezobslužný program</strong>, který přijímá a obsluhuje požadavky klientů. Webový server je
+          připojen k počítačové síti a přijímá požadavky v souladu s protokolem HTTP (HTTP Request). Tyto požadavky
+          vyřizuje a počítači, který požadavek vznesl, vrací odpověď.
+        </p>
+        <h4>Příklady webových serverů</h4>
+        <ul>
+          <li>Apache</li>
+          <li>NGINX</li>
+          <li>Microsoft Internet Information Server</li>
+        </ul>
+      </div>
+      <!---------------------------------------------------------------------------------------------------------------------->
+      <h3>Webový klient</h3>
+      <div class="otazka">2.Jak se nazývá program označovaný jako webový klient? Co je jeho úkolem? Vyjmenujte
+        nejpoužívanější webové klienty.</div>
+      <div class="odpoved">
+        <p>
+          lient (browser, prohlížeč) je program, který komunikuje s uživatelem a na základě jeho pokynů se obrací na
+          jednotlivé
+          servery, získává od nich data a zobrazuje je.
+
+          Nejběžnější klienti jsou:
+          <li>
+            Microsoft Internet Explorer
+          </li>
+          <li>
+            Mozilla
+          </li>
+          <li>
+            Firefox
+          </li>
+          <li>
+            Opera
+          </li>
+          <li>
+            Safari
+          </li>
+          <li>
+            Google Chrome
+          </li>
+
+        </p>
+        <p>
+          Existují i klienti fungující v textovém režimu – např. LYNX.
+        </p>
+        <img src="img/prohlizece.jpg" alt="prohlizece">
+      </div>
+      <!---------------------------------------------------------------------------------------------------------------------->
+      <h3>Komunikace mezi webovým klientem a webovým serverem</h3>
+      <div class="otazka">3.Jak probíhá komunikace mezi webovým klientem a webovým serverem?</div>
+      <div class="odpoved">
+        <p>Pomocí protokolu HTTP</p>
+        <p>
+          Protokol funguje způsobem dotaz-odpověď (request-response). Uživatel pomocí prohlížeče pošle serveru dotaz ve
+          formě
+          čistého textu, obsahujícího označení požadovaného dokumentu, informace o schopnostech prohlížeče apod. Server
+          poté
+          odpoví pomocí několika řádků textu popisujících výsledek dotazu (zda se dokument podařilo najít, jakého typu
+          dokument je
+          atd.), za kterými následují data samotného požadovaného dokumentu.
+          Pokud uživatel bude mít po chvíli další dotaz na stejný server (např. proto, že uživatel v dokumentu kliknul
+          na hypertextový
+          odkaz), bude se jednat o další, nezávislý dotaz a odpověď. Z hlediska serveru nelze poznat, jestli tento druhý
+          dotaz jakkoli
+          souvisí s předchozím. Kvůli této vlastnosti se protokolu HTTP říká bezestavový protokol – protokol neumí
+          uchovávat stav
+          komunikace, dotazy spolu nemají souvislost.
+        </p>
+      </div>
+      <h3>HTTP</h3>
+      <div class="otazka">4. Co je HTTP?</div>      
+      <div class="odpoved">
+        <p>
+          HTTP (HyperText Transfer Protocol, standardní port na straně serveru je 80) - jednoduchý aplikační protokol s
+          komunikací
+          charakteru požadavek – odpověď. Žádosti mají formu jednoduchých příkazů a mohou být upřesňovány pomocí různých
+          parametrů, tzv. hlaviček. Odpovědi mají číselný charakter a nejčastěji obsahují i WWW stránku, kterou klient
+          požadoval.
+          V současné době se používají verze HTTP 1.0 a HTTP 1.1, lišící se především v tom, jak se chovají k více
+          souběžným
+          požadavkům od jednoho klienta. Zatímco verze 1.0 každý požadavek vyřizuje samostatně, verze 1.1 dokáže sdružit
+          více
+          požadavků do jedné relace a přenášet v rámci stejného transportního spojení.
+          HTTP je původně bezestavový protokol, neboť každý požadavek server vyřizuje bez ohledu na předchozí požadavky –
+          tj.
+          nepamatuje si žádný údaj zaslaný předešlou stránkou. V mnoha případech je však nutné zachovat informaci i při
+          přechodu na
+          další stránku (např. obsah virtuálního nákupního košíku, přihlašovací údaje atd.).
+          Existují tři varianty řešení tohoto problému:
+          <li>Cookies</li>
+          <li>Zahrnutí stavové informace do URL odkazů</li>
+          <li>Session</li>
+        </p>
+      </div>
+      <!-- 5. otázka -->
+      <h3>Stavové kódy HTTP</h3>
+      <div class="otazka">5. Vypište do tabulky stavové kódy HTTP.</div>
+      <div class="odpoved">
+        <table>
+          <caption>Stavové kód odpovědi serveru</caption>
+          <tbody>
+            <tr>
+              <th>Kód</th>
+              <th>Typ zprávy</th>
+            </tr>
+            <tr>
+              <td>1..</td>
+              <td>informační zpráva</td>
+            </tr>
+            <tr>
+              <td>2..</td>
+              <td>úspěch</td>
+            </tr>
+            <tr>
+              <td>3..</td>
+              <td>přesměrování</td>
+            </tr>
+            <tr class="error">
+              <td>4..</td>
+              <td>chyba klientu</td>
+            </tr>
+            <tr class="error">
+              <td>5..</td>
+              <td>chyba serveru</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>protokol HTTPS</h3>
+      <div class="otazka">6. Proč se stále častěji využívá protokol HTTPS?</div>
+      <div class="odpoved">
+        <p>
+          HTTPS je nadstavba
+          protokolu HTTP, která poskytuje zvýšenou bezpečnost před odposloucháváním či podvržením dat. HTTPS není
+          speciální
+          protokol, protože data jsou přenášena pomocí HTTP: nejsou však přenášena v běžném textu, ale šifrována pomocí
+          SSL nebo
+          TLS (speciální vrstva vložená mezi vrstvu transportní a aplikační), což zaručuje ochranu proti útokům. Pro
+          komunikaci
+          pomocí HTTPS musí nejdříve server vlastnit certifikát. Certifikát musí být podepsán tzv. certifikační
+          autoritou, která zaručí,
+          že vlastník certifikátu se nevydává za nikoho jiného. Webové prohlížeče jsou většinou vybaveny podpisovými
+          certifikáty
+          největších podpisových autorit.
+        </p>
+        <li>Odpověď: vyšší bezpečnost.</li>
+      </div>
+      <h3>URL</h3>
+      <div class="otazka">7. Vysvětlete zkratku URL a připojte pět různých příkladů URL odkazů.</div>
+      <div class="odpoved">
+        <p>URL definuje doménovou adresu serveru, umístění zdroje na serveru a protokol, kterým je možné zdroj
+          zpřístupnit. </p>
+        <li> <a href="https://cs.wikipedia.org/w/wiki.phtml?title=URL&action=edit">https://cs.wikipedia.org/w/wiki.phtml?title=URL&action=edit</a></li>
+        <li><a href="ftp://student:00000@192.168.10.200/IT4 ">ftp://student:00000@192.168.10.200/IT4 </a></li>
+      </div>
+      <h3>Cookies</h3>
+      <div class="otazka">8. Co jsou a k čemu slouží tzv. cookies? Připojte obrázek ukazující uložená cookies k některé
+        internetové stránce.</div>
+      <div class="odpoved">
+        <p>
+          Cookies (sušenky). Jsou Malé textové soubory, které si daný server může dočasně uložit na klientském počítači.
+          Mají
+          omezenou velikost a v případě vyššího bezpečnostního nastavení klienta mohou být zakázány
+        </p>
+        <img src="img/cookies.png" alt="sušenky">
+      </div>
+      <!-- 9. otázka -->
+      <h3>Internetový vyhledávač</h3>
+      <div class="otazka">9. Vypište přehledně jednotlivé fáze fungování internetových vyhledávačů.</div>
+      <div class="odpoved">
+        <ol id="search">
+          <li>Prohledání webových stránek. Pro prohledání webových stránek má internetový vyhledávač automatický
+            program, tzv. vyhledávací robot (crawler, bot, nebo též spider – „pavouk“), který prochází celý webový
+            prostor. Robot dostane na začátku seznam atraktivních vstupních míst (odkazů), jejichž obsah si přečte,
+            uloží do databáze a zapamatuje si navštívenou adresu odkazu, aby se na ni již podruhé nevracel. Z obsahu
+            stažené stránky vybere seznam všech obsažených odkazů a opět všechny odkazy navštíví. Cyklus návštěvy,
+            sesbírání odkazů a dalších návštěv se stále opakuje. Robot se na navštívené stránky vrací v pravidelných
+            intervalech, aby zjistil, zda se na stránce neobjevily nějaké nové informace. Z principu práce vyhledávače
+            vyplývá, že nikdy nemá úplně aktuální informace, ale prezentuje je se zpožděním.
+          </li>
+          <li>Indexování. Databázi obsahující uložené obsahy navštívených stránek je potřeba indexovat, aby bylo možné
+            podle zadaných slov co nejrychleji najít adresy stránek, které je obsahují. Zároveň je nutné vystavět index
+            tak, aby poskytoval na prvních místech stránky s nejvyšší užitnou hodnotou (relevancí, mající nejvyšší
+            hodnocení kvality, nejvyšší váhu). Pro výpočet relevance se používají nejrůznější algoritmy, které jsou
+            založeny na nejrůznějších znacích stránek a různých úhlech analýzy jejich obsahu:
+            <ul>
+              <li>Váha slov. Stránka má vyšší hodnocení, když má hledané slovo na stránce vyšší váhu. Váha slov se
+                zvyšuje, je-li slovo v titulku stránky, nadpisu nebo blíže k začátku stránky, případně se na stránce
+                opakuje. Váhu slov lze zneužít vkládáním atraktivních slov do obsahu stránky bez ohledu na její skutečný
+                obsah nebo prostým opakováním slov. Vyhledávač se brání penalizací (snížením kvality) podezřelých
+                stránek.
+              </li>
+              <li>Atraktivita stránky. Stránka má vyšší hodnocení, když na ni odkazuje více jiných stránek, protože
+                zřejmě obsahuje zajímavé informace. Atraktivitu lze zneužít vytvářením falešných stránek, které odkazují
+                na stránku, která má získat vyšší hodnocení. Vyhledávač se brání sledováním podezřelého náhlého
+                hromadění odkazů.
+              </li>
+            </ul>
+          </li>
+          <li>Vyhledávání. Databáze a její index se zpřístupní na vstupní stránce vyhledávače. Uživatel získá po zadání
+            hledaných slov seznam adres, na kterých robot hledaná slova našel. Pro vyšší přehlednost se zobrazuje kromě
+            odkazu ještě titulek stránky, a okolí nalezených slov.
+          </li>
+        </ol>
+      </div>
+      <h3><abbr title="HyperText Markup Language">HTML</abbr> a hypertext</h3>
+      <div class="otazka">10. Vysvětlete zkratku <abbr title="HyperText Markup Language">HTML</abbr> a pojem hypertext.
+      </div>
+      <div class="odpoved">
+        <p>
+          Hypertext – text, který obsahuje propojení na jiné texty pomocí tzv. hypertextových odkazů – ve službě WWW
+          realizovány
+          jako tzv. URL odkazy.
+          Služba je založena na spolupráci WWW klientů (browserů) s WWW serverem. Při jejich spolupráci fungují
+          následující
+          mechanismy:
+          <li>
+            komunikační protokol HTTP, pomocí něhož WWW klient a WWW server komunikují,
+          </li>
+          <li>
+            jazyk <abbr title="HyperText Markup Language">HTML</abbr> (HyperText Markup Language), definující formát WWW
+            stránek, které server vrací klientovi.
+          </li>
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <hr />
+    <p>&copy; 2021 - IT1 - Daniel Antoš</p>
+  </footer>
+</body>
+
+</html>
